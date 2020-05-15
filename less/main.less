@@ -1,0 +1,82 @@
+.container{
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+
+  
+
+    .title-container{
+        max-width: 100%;
+        .flex(flex, column, center, center);
+        background-image:url("https://www.tate.org.uk/art/images/work/T/T01/T01928_10.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 380px;
+        margin: 0% 10% 3.5% 10%;
+
+        @media@mobile{
+            height: 250px;
+        }
+
+        h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 300%;
+            color: white;
+        }
+
+     
+        .btn();
+
+       
+    }
+
+    .artists-container{
+        border-top: 2px solid #D3D3D3;
+        width: 100%;
+        margin: auto;
+        .flex(flex, row, space-between, center);
+
+        @media@mobile{
+            .flex(flex,column,space-between,center);
+        }
+        
+
+        .artist{
+            width: 48%;
+            height: 500px;
+            .flex(flex, column, flex-start, center);
+            padding: 3.0% 2%;
+
+            @media@mobile{
+                height: 420px;
+            }
+            
+            
+            a{
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                font-size: 1.6rem;
+                color: grey;
+                margin: 3% 0%;
+            }
+
+            .bio{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.0rem;
+            }
+
+            @media@mobile{
+                width: 60%;
+            }
+           
+
+            .img{
+                width: 80%;
+                height: 200px;
+                border-radius: 20px;
+            }
+
+        }
+    }
+}
