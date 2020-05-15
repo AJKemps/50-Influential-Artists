@@ -151,10 +151,10 @@ header nav {
 header nav a {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  margin: 5% 0%;
+  margin: 5% 0% 3% 0%;
   padding: 0% 2%;
   font-size: 2rem;
-  color: black;
+  color: #333333;
 }
 header nav #home {
   font-weight: bold;
@@ -193,16 +193,16 @@ header nav #about {
 }
 .container .title-container button {
   background-color: white;
-  border: 2px solid grey;
-  color: grey;
-  padding: 7px 15px;
+  border: 2px solid #333333;
+  color: #333333;
+  padding: 4px 6px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   border-radius: 0.5rem;
-  width: 160px;
-  box-shadow: 5px 5px 4px black;
+  width: 110px;
+  box-shadow: 3px 3px 2px #333333;
 }
 .container .artists-container {
   border-top: 2px solid #D3D3D3;
