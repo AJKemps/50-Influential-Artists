@@ -208,11 +208,14 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
+console.log(artists[0].name);
+console.log(artists[2].bio);
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-
+artists[8].name = 'Vincent Van Gogh';
+console.log(artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -223,8 +226,11 @@ const artists = [
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(id, name) {
-    /* code here */
+    const theArtists = name[id];
+    return `The artist at index ${id} is ${theArtists.name}`
   }
+
+  console.log(getArtistByIndex(0,artists));
   
   /**
 
@@ -237,20 +243,32 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(id, name) {
+    name.splice(id,id);
   }
+
+removeArtist(3,artists);
+console.log(artists[3]);
   
   /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(arr){
 
-    /* Code here */
+    const newArr = []
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].paintings > 100) {
+        newArr.push(arr[i].name);
+      }
+    }
+    return newArr;
 
   }
+
+  console.log(lotsOfArt(artists));
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -262,13 +280,13 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist([id,name,years,genre,nationality,bio]){
+  artists.push({id,name,years,genre,nationality,bio});
   }
 
+addArtist([21, 'Alex Kemper', 29, 'Web Design', 'european', 'Add 1-2 sentences']);
 
+console.log(artists[17]);
 
 
 
